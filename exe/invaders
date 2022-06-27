@@ -1,0 +1,10 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+require "invaders"
+
+unless Invaders::CLI.all_tasks.key?(ARGV[0]) || Invaders::CLI.instance_variable_get(:@map)&.key?(ARGV[0])
+  ARGV.unshift(Invaders::CLI.default_task)
+end
+
+Invaders::CLI.start(ARGV)
