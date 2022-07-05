@@ -13,7 +13,7 @@ module Invaders
         file_path: path,
         threshold: options[:threshold],
         output: Printers::StdOut,
-        format: options[:format],
+        format: options[:format]
       ).call
     rescue Error => e
       warn e.message

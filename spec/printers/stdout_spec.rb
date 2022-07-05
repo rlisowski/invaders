@@ -3,7 +3,7 @@
 require "spec_helper"
 
 RSpec.describe Invaders::Printers::StdOut do
-  subject { described_class.new({ radar_image: radar_image, windows: windows, format: format }).call }
+  subject { described_class.new(radar_image: radar_image, windows: windows, format: format).call }
   let(:radar_image) do
     Invaders::RadarImage.new(<<~IMAGE)
       ---------

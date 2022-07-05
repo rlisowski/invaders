@@ -3,7 +3,9 @@
 require "spec_helper"
 
 RSpec.describe Invaders::Detector do
-  subject { described_class.new({ file_path: path, threshold: 0.8, format: "full", output: Invaders::Printers::StdOut }).call }
+  subject do
+    described_class.new(file_path: path, threshold: 0.8, format: "full", output: Invaders::Printers::StdOut).call
+  end
 
   context "missing file" do
     let(:path) { "asd.log" }
